@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<meta charset="ISO-8859-1"></meta>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Insert title here</title>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" />
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/custom.css" rel="stylesheet" />
+<!-- Just for debugging purposes. Don't actually copy this line! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script src="js/modernizr.js"></script>
+</head>
+<body>
+
+	<div class="page-header">	
+	<img src="img/logo.png" class="img-responsive center-block" ></img>
+	</div>
+	<br/><br/>
+	<div class="container">
+		<div th:each="entry, status:${features}">
+			<div class="card">
+				<i class="fa fa-flask"></i>
+				<h4 th:text="${entry.name}" style="color:white; font:bold;"></h4>
+				<p th:text="${entry.description}"></p>
+				<p>
+					<br />
+					<a href="#" class="btn btn-theme">Entrer</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<ul class="timeline">
+		<div th:each="entry, status:${journal}">
+			<li th:attr="class=${status.odd}?'timeline-inverted':''">
+				<div class="tl-circ"></div>
+				<div class="timeline-panel">
+					<div class="heading">
+						<h1>
+							<span th:text="${entry.title}"></span>
+						</h1>
+						<p th:text="${entry.created}"></p>
+					</div>
+					<div>
+						<p th:text="${entry.summary}"></p>
+					</div>
+
+				</div>
+			</li>
+		</div>
+
+	</ul>
+
+</body>
+</html>
