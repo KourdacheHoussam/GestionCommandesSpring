@@ -33,15 +33,15 @@ public class SpringBootJournalApplication {
 				repo.save(new Journal("J3","JA3","2017-12-12"));
 				repo.save(new Journal("J4","JA4","2017-12-12"));
 				
-				repo2.save(new Feature("Au labo", "Recevez vos commandes et les préparer dans le laboratoire", "imgurl", "iconUrl", true));
+				repo2.save(new Feature("Au labo", "Recevez vos commandes et les préparer dans le laboratoire", "kitchen.png", "kitchen.png", true));
 
-				repo2.save(new Feature("Au Kiosk", "Recevez vos commandes et les préparer dans le laboratoire", "imgurl", "iconUrl", true));
+				repo2.save(new Feature("Au Kiosk", "Recevez vos commandes et les préparer dans le laboratoire", "kiosk.png",  "kiosk.png", true));
 
-				repo2.save(new Feature("Remise de commandes", "Terminer les commandes et les remettre aux clients", "imgurl", "iconUrl", true));
+				repo2.save(new Feature("Remise de commandes", "Terminer les commandes et les remettre aux clients", "checkout.png", "checkout.png", true));
 
-				repo2.save(new Feature("Historique", "Visualiser et trier l'historique de vos commandes", "imgurl", "iconUrl", true));
+				repo2.save(new Feature("Historique", "Visualiser et trier l'historique de vos commandes", "historique.png", "historique.png", true));
 				
-				repo2.save(new Feature("Statistiques", "Editer un bilan de vos commandes", "imgurl", "iconUrl", true));
+				repo2.save(new Feature("Statistiques", "Editer un bilan de vos commandes", "analytics.png", "analytics.png", true));
 		};
 	}
 }

@@ -5,6 +5,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.validation.constraints.AssertTrue;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
@@ -16,6 +18,7 @@ public class Feature {
 	private String description;
 	private String imageUrl;
 	private String iconUrl;
+	@AssertTrue
 	private boolean enabled;
 	
 	public Feature() {}
